@@ -14,7 +14,8 @@
     "start": "react-scripts start",
     "dev": "webpack-dev-server --config=webpack.config.js --colors",
     "build": "SET NODE_ENV=production&&webpack -p --config webpack.config.js --colors",
-    "test": "react-scripts test --env=jsdom",
+    "test-watch": "jest --config=jest.config.js --watchAll",
+    "test": "jest --config-jest.config.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
@@ -25,8 +26,10 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.1.0",
+    "jest-enzyme": "^6.0.2",
     "less": "^2.7.1",
     "less-loader": "^4.1.0",
     "style-loader": "^0.21.0",

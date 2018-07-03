@@ -1,0 +1,10 @@
+module.exports={
+    verbose:true,
+    moduleNameMapper:{
+        "\\.(css)$":"<rootDir>/node_modules/css-loader",
+        "\\.(less)$":"<rootDir>/node_modules/less-loader"
+    },
+    setupFiles:[
+        "<rootDir>/src/setupJtest.js"
+    ],
+}
