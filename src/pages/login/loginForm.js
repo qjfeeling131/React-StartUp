@@ -10,7 +10,6 @@ const FormItem = Form.Item;
         const { getFieldDecorator } = this.props.form;
         return (
             <Form className="login-form">
-            <div>test</div>
                 <FormItem>
                     {getFieldDecorator('userName', {
                         rules: [{ required: true, message: 'Please input your username!' }],
@@ -34,6 +33,7 @@ const FormItem = Form.Item;
                     )}
                     <a className="login-form-forgot" href="">Forgot password</a>
                     <Button type="primary" htmlType="submit" className="login-form-button">
+                    Log In
                     </Button>
                     Or <a href="">register now!</a>
                 </FormItem>

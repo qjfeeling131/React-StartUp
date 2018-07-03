@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 import WSAPP from "./pages/wsApp";
 import { Login } from "./pages/login/login";
 import 'antd/dist/antd.css'

@@ -8,12 +8,11 @@
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.4.0-alpha.1",
     "react-scripts": "1.1.4",
-    "redux": "^4.0.0",
-    "save": "^2.3.2"
+    "redux": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "webpack-dev-server --config=webpack.config.js  --progress --colors",
+    "dev": "webpack-dev-server --config=webpack.config.js --colors",
     "build": "SET NODE_ENV=production&&webpack -p --config webpack.config.js --colors",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -24,13 +23,15 @@
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.1.0",
+    "less": "^2.7.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.21.0",
     "webpack": "^4.12.0",
     "webpack-cli": "^2.1.3",
-    "webpack-dev-server": "^3.1.4",
-    "css-loader": "^0.28.11",
-    "style-loader": "^0.21.0",
-    "jest": "^23.1.0",
-    "enzyme": "^3.3.0"
+    "webpack-dev-server": "^3.1.4"
   }
 }
