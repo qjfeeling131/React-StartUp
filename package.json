@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "antd": "^3.6.2",
+    "immutable": "^3.8.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.4.0-alpha.1",
     "react-scripts": "1.1.4",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "redux-action-creator": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
