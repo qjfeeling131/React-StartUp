@@ -1,12 +1,5 @@
-import {Map,fromJS} from 'immutable';
-import {createTypes} from 'redux-action-creator';
+import { Map, fromJS } from 'immutable';
+import { createAction, createActions } from "redux-actions";
+import actionType from "../constants/actionType";
 
-const actionCreator={
-
-    login(authUser){
-        return {
-            type:"",
-            payload:{authUser}
-        }
-    }
-}
+export const authUser = createAction(actionType.AUTH_USER, authUser => authUser)
