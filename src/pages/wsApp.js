@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import 'antd/dist/antd.css'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import { EAFNOSUPPORT } from 'constants';
@@ -7,7 +6,7 @@ const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
 
-class App extends Component {
+class WSAPP extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -77,4 +76,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default WSAPP;

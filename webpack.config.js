@@ -1,9 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path=require('path')
+const path = require('path')
 var config = {
-    entry: path.join(__dirname,'src/index.js'), 
+    entry: path.join(__dirname, 'src/index.js'),
     output: {
-        path: path.join(__dirname,'dist'),
+        path: path.join(__dirname, 'dist'),
         filename: 'main.js'
     },
     devServer: {
@@ -11,9 +11,9 @@ var config = {
         inline: true,
         port: 8080
     },
-    plugins:[new HtmlWebpackPlugin({
-        title:'React Demo',
-        template:path.join(__dirname,'public/index.html')
+    plugins: [new HtmlWebpackPlugin({
+        title: 'React Demo',
+        template: path.join(__dirname, 'public/index.html')
     })],
     module: {
         rules: [
@@ -22,22 +22,36 @@ var config = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['es2015','react']
+                    presets: ['es2015', 'react']
                 }
             },
             {
                 test: /\.css$/,
                 use: [
-                  {
-                    loader: 'style-loader',
-                  },
-                  {
-                    loader: 'css-loader',
-                  },
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
                 ],
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
+                    {
+                        loader: 'less-loader'
+                    }
+                ]
             }
         ]
     }
 }
 
-module.exports=config
+module.exports = config
