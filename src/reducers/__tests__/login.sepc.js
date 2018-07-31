@@ -5,8 +5,20 @@ import { Map } from "immutable";
 
 describe('login reducer', () => {
 
-    it('should be made the handleActions worked', () => {
-        console.log(loginReducer(undefined, {}))
+    //TODO: It used the handleActions, and will be optimized in next sprint.
+    // it('should be made the handleActions worked', () => {
+    //     console.log(loginReducer(undefined, {}))
+    //     let expectResult = Map({
+    //         authUser: {
+    //             token: ''
+    //         },
+    //         user: {
+
+    //         }
+    //     });
+    //     expect(loginReducer(undefined,{})).toEqual(expectResult);
+    // })
+    it('should be worked well', () => {
         let expectResult = Map({
             authUser: {
                 token: ''
@@ -15,6 +27,10 @@ describe('login reducer', () => {
 
             }
         });
-        expect(loginReducer(undefined,{})).toEqual(expectResult);
+        let action = {
+            type: actionType.AUTH_USER,
+            payload: []
+        }
+        expect(loginReducer(expectResult, action)).toEqual(expectResult);
     })
 })
