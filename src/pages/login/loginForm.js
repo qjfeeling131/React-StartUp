@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { connect } from "react-redux";
 const FormItem = Form.Item;
 
- export class LoginForm extends Component {
+ class LoginForm extends Component {
     constructor(props){
         super(props)
     }
@@ -41,3 +42,27 @@ const FormItem = Form.Item;
         )
     }
 }
+
+const mapStateToProps = state => {
+    console.log('mapState',state.toObject())
+    return {
+      authUser: state.get('authUser').get('authUser').toObject(),
+      order: state.get('order').toObject()
+    }
+  };
+const mapDispatchToProps = (dispatch) => ({
+    authApp: (user) => dispatch(authUser(user))
+  });
+  
+const WrapperLoginForm = Form.create({
+  //TODO:It need to bind the pros into ant.Form
+  // mapPropsToFields(props) {
+  //     console.log("test")
+  //     return {
+  //         userName: Form.createFormField(props.user.userName),
+  //         password: Form.createFormField(props.user.password),
+  //         remember: Form.createFormField(props.user.password)
+  //     }
+  // }
+})(LoginForm);
+export default connect(mapStateToProps,mapDispatchToProps)(Form.create({})(WrapperLoginForm))
